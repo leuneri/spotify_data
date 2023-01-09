@@ -27,7 +27,7 @@ a = playlist_uri[0]
 x = sp.playlist_tracks(a)
 
 json_object = json.dumps(x)
-with open("sample.json", "w") as outfile:
+with open("spotify_data.json", "w") as outfile:
     outfile.write(json_object)
 
 
