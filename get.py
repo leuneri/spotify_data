@@ -9,3 +9,7 @@ response = obj['Body']
 
 json_data = json.loads(response.read().decode('utf-8'))
 print(json_data)
+# print(type(obj))
+# print(obj)
+with open("extracted_data.json", "w") as outfile:
+    json.dump(json_data, outfile)
