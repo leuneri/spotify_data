@@ -1,8 +1,9 @@
 import json
 from pyspark.sql import SparkSession
-import get
-
+import os
+pwd = str(os.getcwd())
+pwd = pwd[:-11] + "3-Extract"
 spark = SparkSession.builder.appName("JSON Processing").getOrCreate()
-df = spark.read.json("./extracted_data.json")
+df = spark.read.json(pwd + "\extracted_data.json")
 df.show()
 
